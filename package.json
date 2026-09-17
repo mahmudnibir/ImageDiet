@@ -1,7 +1,17 @@
 {
   "name": "imagediet",
-  "private": true,
+  "private": false,
   "version": "0.1.0",
+  "description": "Local-first bulk image optimization in the browser",
+  "author": "Mahmud Nibir",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mahmudnibir/ImageDiet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mahmudnibir/ImageDiet/issues"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
