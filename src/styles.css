@@ -14,8 +14,8 @@ nav button.active, nav button:hover { background: #e8e7e2; color: #171717; }
 .github-link { align-items: center; color: #676660; display: flex; font: 11px 'DM Mono', monospace; gap: 5px; margin-left: auto; text-decoration: none; }
 .github-link:hover { color: #171717; }
 .github-link span { font-size: 15px; line-height: 1; }
-.local { align-items: center; color: #777; display: flex; font: 12px 'DM Mono', monospace; gap: 7px; margin-left: auto; }
-.local i { background: #547657; border-radius: 50%; height: 7px; width: 7px; }
+.local { align-items: center; background: #e5f26e; border: 1px solid #cad454; border-radius: 999px; color: #343719; display: flex; font: 11px 'DM Mono', monospace; gap: 7px; margin-left: 0; padding: 8px 11px; white-space: nowrap; }
+.local i { background: #617300; border-radius: 50%; box-shadow: 0 0 0 3px rgba(97,115,0,.15); height: 7px; width: 7px; }
 .hero { margin: 86px auto 48px; max-width: 760px; padding: 0 24px; text-align: center; }
 .eyebrow { color: #777; font: 11px 'DM Mono', monospace; letter-spacing: .13em; margin: 0 0 16px; }
 h1 { font-size: clamp(52px, 8vw, 92px); font-weight: 600; letter-spacing: -.065em; line-height: .92; margin: 0; }
@@ -60,6 +60,10 @@ select:hover { background-color: #f8f7f3; border-color: #a8a59c; }
 select:focus, .control > input:not(.range):focus { border-color: #8b5939; box-shadow: 0 0 0 3px rgba(139,89,57,.12); outline: none; }
 .control label > span { color: #171717; float: right; font-family: 'DM Mono', monospace; margin-left: auto; }
 .range { accent-color: #171717; min-height: 39px; width: 100%; }
+.setting-notes { display: grid; gap: 8px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 3px 0 18px; }
+.setting-notes div { background: #f4f3ee; border-left: 2px solid #c9d54c; display: flex; flex-direction: column; gap: 4px; padding: 10px 11px; }
+.setting-notes strong { font: 10px 'DM Mono', monospace; letter-spacing: .05em; text-transform: uppercase; }
+.setting-notes span { color: #777; font-size: 11px; line-height: 1.4; }
 .advanced-grid { border-top: 1px solid #e2e0da; display: grid; gap: 13px; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 18px 0; }
 .check { align-items: center; color: #676660 !important; flex-direction: row !important; gap: 8px; line-height: 1.35; padding-top: 22px; }
 .check input { accent-color: #171717; }
@@ -84,4 +88,4 @@ select:focus, .control > input:not(.range):focus { border-color: #8b5939; box-sh
 .presetgrid button:hover { border-color: #8b5939; transform: translateY(-2px); }
 .presetgrid strong { font-size: 17px; }
 .presetgrid span { color: #777; font: 11px 'DM Mono', monospace; }
-@media (max-width: 760px) { .topbar { gap: 10px; padding: 0 20px; } nav { margin-left: auto; } nav button { padding: 7px 8px; } .local { display: none; } .hero { margin-top: 62px; } .sub { font-size: 15px; } .workspace { padding: 0 16px; } .workspace-grid, .file-list, .controls, .advanced-grid { grid-template-columns: 1fr; } .recipe-title { align-items: start; flex-direction: column; gap: 12px; } .recipe-title > span { margin: 0; } .check { padding-top: 0; } .result { align-items: start; flex-direction: column; gap: 20px; } .presetgrid { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .topbar { gap: 10px; padding: 0 20px; } nav { margin-left: auto; } nav button { padding: 7px 8px; } .github-link { display: none; } .local { display: none; } .hero { margin-top: 62px; } .sub { font-size: 15px; } .workspace { padding: 0 16px; } .workspace-grid, .file-list, .controls, .advanced-grid, .setting-notes { grid-template-columns: 1fr; } .recipe-title { align-items: start; flex-direction: column; gap: 12px; } .recipe-title > span { margin: 0; } .check { padding-top: 0; } .result { align-items: start; flex-direction: column; gap: 20px; } .presetgrid { grid-template-columns: 1fr; } }
