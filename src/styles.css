@@ -11,6 +11,9 @@ button { color: inherit; cursor: pointer; }
 nav { display: flex; gap: 5px; }
 nav button { background: transparent; border: 0; border-radius: 8px; color: #777; padding: 8px 12px; }
 nav button.active, nav button:hover { background: #e8e7e2; color: #171717; }
+.github-link { align-items: center; color: #676660; display: flex; font: 11px 'DM Mono', monospace; gap: 5px; margin-left: auto; text-decoration: none; }
+.github-link:hover { color: #171717; }
+.github-link span { font-size: 15px; line-height: 1; }
 .local { align-items: center; color: #777; display: flex; font: 12px 'DM Mono', monospace; gap: 7px; margin-left: auto; }
 .local i { background: #547657; border-radius: 50%; height: 7px; width: 7px; }
 .hero { margin: 86px auto 48px; max-width: 760px; padding: 0 24px; text-align: center; }
@@ -51,8 +54,10 @@ h1 em { color: #8b5939; font-style: normal; }
 .recipe-title > span { color: #777; font: 10px 'DM Mono', monospace; margin-bottom: 3px; }
 .controls { display: grid; gap: 13px; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 22px 0 15px; }
 .control label, .advanced-grid label { color: #777; display: flex; flex-direction: column; font-size: 12px; gap: 8px; }
-.control > input:not(.range), select { appearance: none; background: #fff; border: 1px solid #d5d3cc; border-radius: 7px; color: #171717; min-height: 39px; padding: 0 10px; }
-select { background-image: linear-gradient(45deg, transparent 50%, #777 50%), linear-gradient(135deg, #777 50%, transparent 50%); background-position: calc(100% - 15px) 17px, calc(100% - 11px) 17px; background-repeat: no-repeat; background-size: 4px 4px; padding-right: 25px; }
+.control > input:not(.range), select { appearance: none; background-color: #fff; border: 1px solid #d5d3cc; border-radius: 7px; color: #171717; min-height: 42px; padding: 0 12px; transition: border-color .15s, box-shadow .15s, background-color .15s; }
+select { background-image: linear-gradient(45deg, transparent 50%, #777 50%), linear-gradient(135deg, #777 50%, transparent 50%); background-position: calc(100% - 16px) 18px, calc(100% - 12px) 18px; background-repeat: no-repeat; background-size: 4px 4px; cursor: pointer; padding-right: 32px; }
+select:hover { background-color: #f8f7f3; border-color: #a8a59c; }
+select:focus, .control > input:not(.range):focus { border-color: #8b5939; box-shadow: 0 0 0 3px rgba(139,89,57,.12); outline: none; }
 .control label > span { color: #171717; float: right; font-family: 'DM Mono', monospace; margin-left: auto; }
 .range { accent-color: #171717; min-height: 39px; width: 100%; }
 .advanced-grid { border-top: 1px solid #e2e0da; display: grid; gap: 13px; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 18px 0; }
