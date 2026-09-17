@@ -661,19 +661,34 @@ function App() {
       {tab === "About" && (
         <section className="page">
           <p className="eyebrow">ABOUT IMAGEDIET</p>
-          <h2>Your images stay yours.</h2>
-          <p>
-            ImageDiet processes images inside your browser. There is no upload
-            server, account, or image storage. It is designed for repetitive
-            bulk work: drop many files, create a recipe, and process everything
-            in one pass.
-          </p>
+          <h2>Less weight. More control.</h2>
+          <p>ImageDiet is an open-source bulk image optimizer for the repetitive work between a camera roll and a finished website.</p>
+          <div className="info-grid">
+            <article><span className="info-index">01</span><h3>Local by design</h3><p>Images are decoded, resized, converted, and zipped in your browser. There is no upload server, account, or image storage.</p></article>
+            <article><span className="info-index">02</span><h3>Recipes, not busywork</h3><p>Set one resize, format, quality, naming, and metadata recipe, then apply it to up to 500 images in one pass.</p></article>
+            <article><span className="info-index">03</span><h3>Made for batches</h3><p>Drop files, choose a folder, paste from your clipboard, preserve folder structure, and download one organized ZIP.</p></article>
+            <article><span className="info-index">04</span><h3>Open source</h3><p>Inspect the code, suggest improvements, or contribute on GitHub. ImageDiet is built by Nibir for practical image work.</p></article>
+          </div>
+          <a className="page-link" href="https://github.com/mahmudnibir/ImageDiet" target="_blank" rel="noreferrer">Explore the source on GitHub <span aria-hidden="true">↗</span></a>
+        </section>
+      )}
+      {tab === "Privacy" && (
+        <section className="page privacy-page">
+          <p className="eyebrow">PRIVACY</p>
+          <h2>Your files never leave this device.</h2>
+          <p>ImageDiet is designed so image processing happens locally in your browser instead of on a remote server.</p>
+          <div className="privacy-list">
+            <div><strong>What stays local</strong><span>Your images, thumbnails, recipes, and generated ZIP files stay in this browser session and on your device.</span></div>
+            <div><strong>What we do not collect</strong><span>There is no ImageDiet account, image upload, image archive, or personal image database.</span></div>
+            <div><strong>One external request</strong><span>The footer can request the public GitHub repository star count. It never includes your files or image metadata.</span></div>
+            <div><strong>Your control</strong><span>Close the tab or clear the batch at any time. Generated files are only downloaded when you choose Download ZIP.</span></div>
+          </div>
         </section>
       )}
       <footer className="site-footer">
         <div className="footer-brand"><span className="mark">ID</span><strong>ImageDiet</strong><span>Private image work, locally.</span></div>
         <nav className="footer-links" aria-label="Footer links">
-          <button onClick={() => setTab("About")}>Privacy</button>
+          <button onClick={() => setTab("Privacy")}>Privacy</button>
           <button onClick={() => setTab("About")}>About</button>
           <a href="https://github.com/mahmudnibir/ImageDiet" target="_blank" rel="noreferrer">View on GitHub</a>
           <a href="https://github.com/mahmudnibir" target="_blank" rel="noreferrer">Developed by Nibir</a>

@@ -84,6 +84,18 @@ select:focus, .control > input:not(.range):focus { border-color: #8b5939; box-sh
 .page { margin: 100px auto; max-width: 760px; padding: 0 24px; }
 .page h2 { font-size: clamp(42px, 7vw, 75px); margin-bottom: 24px; }
 .page > p:not(.eyebrow) { max-width: 580px; }
+.info-grid { display: grid; gap: 12px; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 42px 0 28px; }
+.info-grid article { background: #fbfaf7; border: 1px solid #d8d6cf; border-radius: 12px; padding: 20px; }
+.info-index { color: #8b5939; font: 10px 'DM Mono', monospace; }
+.info-grid h3 { font-size: 20px; letter-spacing: -.04em; margin: 24px 0 9px; }
+.info-grid p { color: #676660; font-size: 13px; line-height: 1.55; margin: 0; }
+.page-link { color: #171717; font: 11px 'DM Mono', monospace; text-decoration: underline; text-underline-offset: 4px; }
+.page-link span { font-size: 15px; margin-left: 4px; text-decoration: none; }
+.privacy-page h2 { max-width: 700px; }
+.privacy-list { border-top: 1px solid #d8d6cf; margin-top: 42px; }
+.privacy-list div { border-bottom: 1px solid #d8d6cf; display: grid; gap: 25px; grid-template-columns: 190px 1fr; padding: 19px 0; }
+.privacy-list strong { font: 11px 'DM Mono', monospace; text-transform: uppercase; }
+.privacy-list span { color: #676660; font-size: 13px; line-height: 1.55; }
 .presetgrid { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); margin-top: 38px; }
 .presetgrid button { align-items: start; background: #fbfaf7; border: 1px solid #d8d6cf; border-radius: 12px; display: flex; flex-direction: column; gap: 9px; padding: 20px; text-align: left; }
 .presetgrid button:hover { border-color: #8b5939; transform: translateY(-2px); }
@@ -98,4 +110,4 @@ select:focus, .control > input:not(.range):focus { border-color: #8b5939; box-sh
 .footer-links button, .footer-links a { background: none; border: 0; color: #777; font: 10px 'DM Mono', monospace; padding: 0; text-decoration: none; }
 .footer-links button:hover, .footer-links a:hover { color: #171717; }
 .footer-links .star-link { align-items: center; background: #e5f26e; border: 1px solid #cad454; border-radius: 999px; color: #343719; display: inline-flex; gap: 5px; padding: 7px 10px; }
-@media (max-width: 760px) { .topbar { gap: 10px; padding: 0 20px; } nav { margin-left: auto; } nav button { padding: 7px 8px; } .github-link { display: none; } .hero { margin-top: 62px; } .sub { font-size: 15px; } .workspace { padding: 0 16px; } .workspace-grid, .file-list, .controls, .advanced-grid, .setting-notes { grid-template-columns: 1fr; } .recipe-title { align-items: start; flex-direction: column; gap: 12px; } .recipe-title > span { margin: 0; } .check { padding-top: 0; } .result { align-items: start; flex-direction: column; gap: 20px; } .presetgrid { grid-template-columns: 1fr; } .site-footer { align-items: start; flex-direction: column; margin-top: 55px; padding: 24px 20px; } .footer-links { justify-content: start; } }
+@media (max-width: 760px) { .topbar { gap: 10px; padding: 0 20px; } nav { margin-left: auto; } nav button { padding: 7px 8px; } .github-link { display: none; } .hero { margin-top: 62px; } .sub { font-size: 15px; } .workspace { padding: 0 16px; } .workspace-grid, .file-list, .controls, .advanced-grid, .setting-notes, .info-grid { grid-template-columns: 1fr; } .recipe-title { align-items: start; flex-direction: column; gap: 12px; } .recipe-title > span { margin: 0; } .check { padding-top: 0; } .result { align-items: start; flex-direction: column; gap: 20px; } .presetgrid { grid-template-columns: 1fr; } .site-footer { align-items: start; flex-direction: column; margin-top: 55px; padding: 24px 20px; } .footer-links { justify-content: start; } .privacy-list div { gap: 8px; grid-template-columns: 1fr; } }
