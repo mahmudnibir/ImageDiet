@@ -21,6 +21,7 @@ nav button.active, nav button:hover { background: #e8e7e2; color: #171717; }
 h1 { font-size: clamp(52px, 8vw, 92px); font-weight: 600; letter-spacing: -.065em; line-height: .92; margin: 0; }
 h1 em { color: #8b5939; font-style: normal; }
 .sub { color: #676660; font-size: 17px; line-height: 1.6; margin: 26px auto 0; max-width: 560px; }
+.privacy-highlight { background: #e5f26e; border-radius: 6px; box-decoration-break: clone; -webkit-box-decoration-break: clone; color: #343719; padding: 2px 6px; }
 .workspace { margin: 0 auto 100px; max-width: 1060px; padding: 0 24px; }
 .dropzone { align-items: center; background: #faf9f6; border: 1.5px dashed #bbb9b1; border-radius: 18px; display: flex; flex-direction: column; gap: 9px; justify-content: center; min-height: 275px; padding: 25px; transition: .15s; }
 .dropzone:hover, .dropzone.dragging { background: #fff; border-color: #777; }
@@ -54,9 +55,9 @@ h1 em { color: #8b5939; font-style: normal; }
 .recipe-title > span { color: #777; font: 10px 'DM Mono', monospace; margin-bottom: 3px; }
 .controls { display: grid; gap: 13px; grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 22px 0 15px; }
 .control label, .advanced-grid label { color: #777; display: flex; flex-direction: column; font-size: 12px; gap: 8px; }
-.control > input:not(.range), select { appearance: none; background-color: #fff; border: 1px solid #d5d3cc; border-radius: 7px; color: #171717; min-height: 42px; padding: 0 12px; transition: border-color .15s, box-shadow .15s, background-color .15s; }
+.control > input:not(.range), select { appearance: none; background-color: #fff; border: 1px solid #d5d3cc; border-radius: 14px; color: #171717; min-height: 44px; padding: 0 14px; transition: border-color .18s, box-shadow .18s, background-color .18s, transform .18s; }
 select { background-image: linear-gradient(45deg, transparent 50%, #777 50%), linear-gradient(135deg, #777 50%, transparent 50%); background-position: calc(100% - 16px) 18px, calc(100% - 12px) 18px; background-repeat: no-repeat; background-size: 4px 4px; cursor: pointer; padding-right: 32px; }
-select:hover { background-color: #f8f7f3; border-color: #a8a59c; }
+select:hover { background-color: #f8f7f3; border-color: #a8a59c; transform: translateY(-1px); }
 select:focus, .control > input:not(.range):focus { border-color: #8b5939; box-shadow: 0 0 0 3px rgba(139,89,57,.12); outline: none; }
 .control label > span { color: #171717; float: right; font-family: 'DM Mono', monospace; margin-left: auto; }
 .range { accent-color: #171717; min-height: 39px; width: 100%; }
@@ -88,4 +89,13 @@ select:focus, .control > input:not(.range):focus { border-color: #8b5939; box-sh
 .presetgrid button:hover { border-color: #8b5939; transform: translateY(-2px); }
 .presetgrid strong { font-size: 17px; }
 .presetgrid span { color: #777; font: 11px 'DM Mono', monospace; }
-@media (max-width: 760px) { .topbar { gap: 10px; padding: 0 20px; } nav { margin-left: auto; } nav button { padding: 7px 8px; } .github-link { display: none; } .local { display: none; } .hero { margin-top: 62px; } .sub { font-size: 15px; } .workspace { padding: 0 16px; } .workspace-grid, .file-list, .controls, .advanced-grid, .setting-notes { grid-template-columns: 1fr; } .recipe-title { align-items: start; flex-direction: column; gap: 12px; } .recipe-title > span { margin: 0; } .check { padding-top: 0; } .result { align-items: start; flex-direction: column; gap: 20px; } .presetgrid { grid-template-columns: 1fr; } }
+.site-footer { align-items: center; border-top: 1px solid #dddcd7; color: #777; display: flex; gap: 25px; justify-content: space-between; margin-top: 80px; padding: 26px 5vw 30px; }
+.footer-brand { align-items: center; display: flex; gap: 9px; }
+.footer-brand .mark { flex: 0 0 auto; }
+.footer-brand strong { color: #171717; font-size: 14px; }
+.footer-brand > span:last-child { font-size: 12px; }
+.footer-links { align-items: center; display: flex; flex-wrap: wrap; gap: 17px; justify-content: end; }
+.footer-links button, .footer-links a { background: none; border: 0; color: #777; font: 10px 'DM Mono', monospace; padding: 0; text-decoration: none; }
+.footer-links button:hover, .footer-links a:hover { color: #171717; }
+.footer-links .star-link { align-items: center; background: #e5f26e; border: 1px solid #cad454; border-radius: 999px; color: #343719; display: inline-flex; gap: 5px; padding: 7px 10px; }
+@media (max-width: 760px) { .topbar { gap: 10px; padding: 0 20px; } nav { margin-left: auto; } nav button { padding: 7px 8px; } .github-link { display: none; } .hero { margin-top: 62px; } .sub { font-size: 15px; } .workspace { padding: 0 16px; } .workspace-grid, .file-list, .controls, .advanced-grid, .setting-notes { grid-template-columns: 1fr; } .recipe-title { align-items: start; flex-direction: column; gap: 12px; } .recipe-title > span { margin: 0; } .check { padding-top: 0; } .result { align-items: start; flex-direction: column; gap: 20px; } .presetgrid { grid-template-columns: 1fr; } .site-footer { align-items: start; flex-direction: column; margin-top: 55px; padding: 24px 20px; } .footer-links { justify-content: start; } }

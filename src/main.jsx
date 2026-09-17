@@ -1,5 +1,5 @@
 import JSZip from "jszip";
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles.css";
 
@@ -174,6 +174,7 @@ function App() {
   const [progress, setProgress] = useState(0);
   const [done, setDone] = useState(null);
   const [error, setError] = useState("");
+  const [stars, setStars] = useState(null);
   const totalBytes = useMemo(
     () => files.reduce((total, item) => total + item.file.size, 0),
     [files],
@@ -186,6 +187,13 @@ function App() {
   );
   const updateRecipe = (key, value) =>
     setRecipe((current) => ({ ...current, [key]: value }));
+
+  useEffect(() => {
+    fetch("https://api.github.com/repos/mahmudnibir/ImageDiet")
+      .then((response) => (response.ok ? response.json() : null))
+      .then((repository) => repository && setStars(repository.stargazers_count))
+      .catch(() => setStars(null));
+  }, []);
 
   const addFiles = (incoming) => {
     const candidates = [...incoming].filter(imageFile);
@@ -302,9 +310,6 @@ function App() {
         >
           <span aria-hidden="true">↗</span> GitHub
         </a>
-        <span className="local">
-          <i /> Local processing
-        </span>
       </header>
       {tab === "Images" && (
         <>
@@ -316,8 +321,7 @@ function App() {
               <em>lighter.</em>
             </h1>
             <p className="sub">
-              Resize, compress and convert hundreds of images at once. Your
-              files never leave this device.
+              Resize, compress and convert hundreds of images at once. <span className="privacy-highlight">Your files never leave this device.</span>
             </p>
           </section>
           <section className="workspace">
@@ -666,6 +670,16 @@ function App() {
           </p>
         </section>
       )}
+      <footer className="site-footer">
+        <div className="footer-brand"><span className="mark">ID</span><strong>ImageDiet</strong><span>Private image work, locally.</span></div>
+        <nav className="footer-links" aria-label="Footer links">
+          <button onClick={() => setTab("About")}>Privacy</button>
+          <button onClick={() => setTab("About")}>About</button>
+          <a href="https://github.com/mahmudnibir/ImageDiet" target="_blank" rel="noreferrer">View on GitHub</a>
+          <a href="https://github.com/mahmudnibir" target="_blank" rel="noreferrer">Developed by Nibir</a>
+          <a className="star-link" href="https://github.com/mahmudnibir/ImageDiet" target="_blank" rel="noreferrer"><span aria-hidden="true">★</span> {stars === null ? "Star on GitHub" : `${stars} stars`}</a>
+        </nav>
+      </footer>
     </main>
   );
 }
